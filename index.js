@@ -116,7 +116,7 @@ addon.get("/resolve/realdebrid/*", (req, res) => {
 });
 
 async function tryProxyStreamWithFallback(remotePath, rangeHeader, res) {
-    const torrentioUrl = `https://torrentio.strem.fun/realdebrid/${remotePath}`;
+    const torrentioUrl = `https://torrentio.strem.fun/resolve/realdebrid/${remotePath}`;
 
     const tryFetchAndProxy = async (url, isRetry = false) => {
         const controller = new AbortController();
